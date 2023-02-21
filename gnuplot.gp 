@@ -1,0 +1,17 @@
+reset 
+fname = "data.txt" #Trouver le fichier des datas
+ 
+set title "Température en °C dans la pièce"
+
+set autoscale xfixmin 
+set autoscale xfixmax
+set autoscale yfixmin
+set autoscale yfixmax
+
+set xlabel "L [m]"
+set ylabel "l [m]"
+
+set palette defined(0 "blue", 10 "yellow", 20 "red")
+
+set pm3d map #obtenir un graphe 2D
+splot "data.txt" u 1:2:3
